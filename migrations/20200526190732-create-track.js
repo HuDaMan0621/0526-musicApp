@@ -8,8 +8,11 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      track_name: {
+      name: {
         type: Sequelize.STRING
+      },
+      duration: {
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,

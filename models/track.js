@@ -1,10 +1,12 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Track = sequelize.define('Track', {
-    track_name: DataTypes.STRING
+    name: DataTypes.STRING,
+    duration: DataTypes.INTEGER,
+    album_id: DataTypes.INTEGER,
   }, {});
   Track.associate = function(models) {
-    // associations can be defined here
+    Track.belongsTo(models.Artist);
   };
   return Track;
 };
